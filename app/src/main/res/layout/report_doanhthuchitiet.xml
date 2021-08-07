@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/layoutheader"
+        android:background="@color/color_background_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:id="@+id/txtTitle"
+            android:text="Báo cáo doanh thu chi tiết"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialogHeight" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:paddingRight="@dimen/padding_small"
+            android:gravity="center"
+            android:id="@+id/imgClosed"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/fa_times_circle"
+            android:textColor="@color/color_while"
+            android:textSize="@dimen/imgCloseDialogHeight"
+            app:solid_icon="true" />
+    </FrameLayout>
+    <LinearLayout
+        android:padding="@dimen/padding_small"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="@dimen/textSize_Medium"
+            android:text="@string/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:id="@+id/rdGroup"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rdBydate"
+                    android:checked="true"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/bydate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/rdOnweek"
+                    android:layout_weight="0.3"
+                    android:text="@string/onweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rdToday"
+                    android:visibility="gone"
+                    android:layout_weight="0.3"
+                    android:text="@string/today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layDatepicker"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="0.5"
+                    android:text="@string/fromdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="@dimen/padding_medium"
+                    android:layout_height="wrap_content"></LinearLayout>
+                <TextView
+                    android:layout_weight="0.5"
+                    android:text="@string/todate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Control.MyDatepicker
+                    android:id="@+id/edtFromDate"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></Control.MyDatepicker>
+                <LinearLayout
+                    android:layout_width="@dimen/padding_medium"
+                    android:layout_height="wrap_content"></LinearLayout>
+                <Control.MyDatepicker
+                    android:id="@+id/edtToDate"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></Control.MyDatepicker>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layChart"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

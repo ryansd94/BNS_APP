@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/order_product_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:id="@+id/layoutSearch"
+        android:layout_below="@+id/layoutheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Control.MyEditText
+            android:drawableRight="@drawable/delete"
+            android:id="@+id/edtProductSearch"
+            android:inputType="none"
+            android:background="@drawable/edittext_round"
+            android:hint="@string/product_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/layoutProductGroup"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        app:layout_constraintHeight_max="30dp"
+        app:layout_constrainedHeight="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:id="@+id/LayoutProduct"
+        android:orientation="vertical"
+        android:clickable="false"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_below="@+id/layoutProductGroup"
+            android:orientation="vertical"
+            android:clickable="false"
+            android:focusableInTouchMode="true"
+            android:background="@color/product_layout_background_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridView
+                android:scrollbars="none"
+                android:horizontalSpacing="@dimen/padding_small"
+                android:verticalSpacing="@dimen/padding_small"
+                android:id="@+id/grdProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchMode="columnWidth"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

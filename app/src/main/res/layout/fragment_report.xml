@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/padding_small"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<Button
+    android:id="@+id/rptDoanhThuTong"
+    android:text="Doanh thu tổng"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</Button>
+    <Button
+        android:id="@+id/rptDoanhThuChiTiet"
+        android:text="Doanh thu chi tiết"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/layoutheader"
+        android:background="@color/color_background_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:id="@+id/txtTitle"
+            android:text="@string/setting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialogHeight" />
+
+        <info.androidhive.fontawesome.FontTextView
+            android:paddingRight="@dimen/padding_small"
+            android:gravity="center"
+            android:id="@+id/imgClosed"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/fa_times_circle"
+            android:textColor="@color/color_while"
+            android:textSize="@dimen/imgCloseDialogHeight"
+            app:solid_icon="true" />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/layQuantity"
+        android:padding="@dimen/padding_small"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apiLink"
+                android:textSize="@dimen/textSize_Medium"
+                ></TextView>
+
+            <Control.MyEditText
+                android:id="@+id/linkapi"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:drawableRight="@drawable/delete"
+                android:hint="@string/enter_api_link"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="0dp"
+
+                android:paddingTop="0dp"
+                android:singleLine="true"
+                android:text="http://phanmem.giaiphapantam.com"
+                android:textSize="@dimen/textSize_Medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/listAPI"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apiList"
+                android:textSize="@dimen/textSize_Medium">
+            </TextView>
+            <RadioGroup
+                android:id="@+id/radApi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/screenSetting"
+                android:textSize="@dimen/textSize_Medium"/>
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rdPortrait"
+                    android:layout_weight="0.5"
+                    android:checked="true"
+                    android:text="@string/screenPortrait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rdLandscape"
+
+                    android:layout_weight="0.5"
+                    android:text="@string/screenLandscape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="@dimen/padding_small"
+        android:id="@+id/footer"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnXacNhan"
+            android:layout_margin="@dimen/padding_small"
+            android:textSize="@dimen/textSize_Medium"
+            android:height="@dimen/buttonHeight_Medium"
+            android:textAllCaps="false"
+            android:text="@string/oki"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:background="@drawable/button_xacnhan_background"
+            android:textColor="@color/color_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

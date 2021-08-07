@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/main"
+        android:layout_marginHorizontal="@dimen/padding_small"
+        android:layout_marginVertical="@dimen/padding_small"
+        android:layout_above="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnSelectArea"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_area_background"
+                    android:text="@string/area"
+                    android:textSize="@dimen/textSize_Small"
+                    android:textColor="@color/color_while"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            <android.support.design.internal.FlowLayout
+                android:paddingLeft="@dimen/padding_small"
+                android:id="@+id/grdArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.design.internal.FlowLayout>
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_marginTop="@dimen/padding_small"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:fillViewport="false"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/grdRoom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/main"
+        android:orientation="horizontal"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rdAll"
+                android:checked="true"
+                android:layout_weight="0.3"
+                android:text="@string/all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rdEmpty"
+                android:layout_weight="0.3"
+                android:text="@string/room_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rdUsed"
+                android:layout_weight="0.3"
+                android:text="@string/room_usesd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/color_background_title"
+        android:orientation="horizontal"
+        android:id="@+id/layoutheader"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:background="@color/color_background_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:id="@+id/txtTitle"
+                android:text="@string/setting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dialogHeight" />
+
+            <info.androidhive.fontawesome.FontTextView
+                android:paddingRight="@dimen/padding_small"
+                android:gravity="center"
+                android:id="@+id/imgClosed"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/fa_times_circle"
+                android:textColor="@color/color_while"
+                android:textSize="@dimen/imgCloseDialogHeight"
+                app:solid_icon="true" />
+
+
+        </FrameLayout>
+    </LinearLayout>
+    <ScrollView
+
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingHorizontal="@dimen/padding_small"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:paddingVertical="@dimen/padding_small"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="@dimen/textSize_Small"
+                    android:text="@string/total_money_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text=""
+                    android:id="@+id/txtTotalmoneyProduct"
+                    android:textSize="@dimen/textSize_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingVertical="@dimen/padding_small"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="@dimen/textSize_Small"
+                    android:text="@string/sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text=""
+                    android:id="@+id/txtSale"
+                    android:textSize="@dimen/textSize_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingVertical="@dimen/padding_small"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textSize_Small"
+                    android:text="@string/customer_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text=""
+                    android:id="@+id/txtCustomerPaid"
+                    android:textSize="@dimen/textSize_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingVertical="@dimen/padding_small"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textSize_Small"
+                    android:focusable="true"
+                    android:text="@string/customer_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:textSize="@dimen/textSize_Medium"
+                    android:id="@+id/edtCusPay"
+                    android:inputType="number"
+                    android:text="000"
+                    android:textAlignment="textEnd"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingVertical="@dimen/padding_small"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textSize_Small"
+                    android:text="@string/excess_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text="0"
+                    android:tag="0"
+                    android:id="@+id/txtExcessCash"
+                    android:textSize="@dimen/textSize_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingVertical="@dimen/padding_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:textAllCaps="false"
+                    android:text="@string/pay"
+                    android:textSize="@dimen/textSize_Medium"
+                    android:textColor="@color/color_text_button"
+                    android:background="@drawable/button_thanhtoan_background"
+                    android:id="@+id/btnPaid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/padding_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="@dimen/textSize_Small"
+                    android:textAlignment="center"
+                    android:id="@+id/txtSTT"
+                    android:text="#"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="0.5"
+                    android:text="@string/product_order"
+                    android:id="@+id/txtProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="@dimen/textSize_Small"
+                    android:text="@string/quantity"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/txtQuantity"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="@string/price"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/txtPrice"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingRight="@dimen/padding_small"
+                    android:textStyle="bold"
+                    android:text="@string/total"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/txtTotalmoney"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <GridView
+                android:id="@+id/grdProductPaid"
+                android:numColumns="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </GridView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

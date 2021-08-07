@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+    Trong mỗi item có
+    id: để truy xuất kết nối code java
+    icon: icon của menu
+    showAsAction: trạng thái cho phép hiển thị trên actionbar không
+    title: tiêu để dạng text
+    -->
+
+    <item
+        android:id="@+id/change_quantity"
+        android:icon="@android:drawable/ic_menu_manage"
+        app:showAsAction="always"
+        android:title="@string/change_quantity"/>
+    <item
+        android:id="@+id/delete"
+        android:icon="@android:drawable/ic_menu_manage"
+        app:showAsAction="always"
+        android:title="@string/delete"/>
+    <item
+        android:id="@+id/add_note"
+        android:icon="@android:drawable/ic_menu_manage"
+        app:showAsAction="always"
+        android:title="@string/add_note"/>
+    <item
+        android:id="@+id/prioritize"
+        android:icon="@android:drawable/ic_menu_manage"
+        app:showAsAction="always"
+        android:title="@string/prioritize"/>
+
+</menu>

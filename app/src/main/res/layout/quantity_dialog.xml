@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginVertical="10dp"
+    android:padding="@dimen/padding_small"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layQuantity"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <info.androidhive.fontawesome.FontTextView
+            android:gravity="center"
+            android:id="@+id/btnMinus"
+            android:paddingRight="@dimen/padding_small"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fa_minus_circle_solid"
+            android:textColor="@color/colorRed"
+            android:textSize="40dp"
+            app:solid_icon="true" />
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/edtQuantity"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <info.androidhive.fontawesome.FontTextView
+            android:gravity="center"
+            android:id="@+id/btnPlus"
+            android:paddingLeft="@dimen/padding_small"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fa_plus_circle_solid"
+            android:textColor="@color/color_background_title"
+            android:textSize="40dp"
+            app:solid_icon="true" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layNote"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edtNote"
+            android:hint="@string/note_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+        <Button
+            android:background="@drawable/button_huybo_background"
+            android:id="@+id/btnCancel"
+            android:textAllCaps="false"
+            android:text="@string/cancel"
+            android:textColor="@color/color_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="@dimen/padding_small"
+            android:layout_height="wrap_content"></LinearLayout>
+        <Button
+            android:background="@drawable/button_xacnhan_background"
+            android:id="@+id/btnAcccept"
+            android:textAllCaps="false"
+            android:text="@string/oki"
+            android:textColor="@color/color_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

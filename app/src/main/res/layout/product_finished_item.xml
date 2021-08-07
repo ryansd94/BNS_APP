@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/padding_small"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="@dimen/padding_small"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtProductName"
+                android:textSize="@dimen/textSize_Large"
+                android:textStyle="bold"
+                android:text="ten mon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="ghi chú"
+                android:textStyle="italic"
+                android:textColor="@color/color_textview_kitchen_left_note"
+                android:id="@+id/txtNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtQuantity"
+                android:gravity="center"
+                android:text="30"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSize_Medium"
+                android:textColor="@color/color_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="@dimen/padding_small"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="1"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtRoomName"
+                android:text="phòng xxx"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:text="thời gian"
+                android:id="@+id/txtTime"
+                android:textStyle="italic"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <Button
+
+            android:text=">"
+            android:id="@+id/btnOne"
+            android:background="@drawable/button_kitchen_left_chuyenmot"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:textColor="@color/color_while"
+            android:layout_height="50dp" />
+        <Button
+            android:id="@+id/btnAll"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:text=">>"
+            android:textColor="@color/color_while"
+            android:background="@drawable/button_kitchen_right_chuyenall"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/txtIndex"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

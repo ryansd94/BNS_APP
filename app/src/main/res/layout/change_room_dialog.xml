@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:padding="@dimen/padding_small"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingVertical="@dimen/padding_medium"
+            android:textSize="@dimen/textSize_Small"
+            android:textStyle="bold"
+            android:text="@string/area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:background="@color/product_order_background_color"
+            android:id="@+id/spiArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingVertical="@dimen/padding_medium"
+            android:textSize="@dimen/textSize_Small"
+            android:textStyle="bold"
+            android:text="@string/room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:background="@color/product_order_background_color"
+            android:id="@+id/spiRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingVertical="@dimen/padding_small"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnAcccept"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:text="@string/oki"
+            android:background="@drawable/button_xacnhan_background"
+            android:textColor="@color/color_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnCancel"
+            android:textAllCaps="false"
+            android:text="@string/cancel"
+            android:background="@drawable/button_huybo_background"
+            android:textColor="@color/color_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
